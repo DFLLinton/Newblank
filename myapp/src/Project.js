@@ -18,35 +18,30 @@ export default function Project() {
 
   function showPicture(x) {
     if (x === "favourite") {
-        if (image1 && image1file) {
       image1.style.display = "block";
       image1file.src = "images/favanswer.jpg";
       leftText.innerHTML=Paragraphs[1];
-        }
+        
     } else if (x === "kroketa") {
-        if (image2 && image2file) {
       image2.style.display = "block";
       image2file.src = "images/kroketa.jpg";
       rightText.innerHTML = Paragraphs[2];
-        }
+        
     } else if (x === "vinos") {
-        if (image2 && image2file) {
       image2.style.display = "block";
       image2file.src = "images/vinos.jpg";
       rightText.innerHTML = Paragraphs[4];
-        }
+        
     }else if (x === "gender") {
-        if (image1 && image1file) {
       image1.style.display = "block";
       image1file.src = "images/sample.jpeg";
       leftText.innerHTML = Paragraphs[3];
-        }
+        
     }else if (x === "animacy") {
-        if (image1 && image1file) {
       image1.style.display = "block";
       image1file.src = "images/animacy.png";
       leftText.innerHTML = Paragraphs[5];
-        }
+        
     }
   }
   function hidePicture(x) {
