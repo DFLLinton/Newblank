@@ -1,10 +1,11 @@
 import "./styles.css";
 import React, { useState } from 'react';
-
+import ImageColumnLeft from './ImageColumnLeft.js';
+import ImageColumnRight from './ImageColumnRight.js';
 
 export default function Project() {
   const [image1Visible, setImage1Visible] = useState(false);
-  const [image1Src, setImage1Src] = useState('');
+  const [image1Src, setImage1Src] = useState('myapp/public/images/favanswer.jpg');
   const [image2Visible, setImage2Visible] = useState(false);
   const [image2Src, setImage2Src] = useState('');
   const [leftTextContent, setLeftTextContent] = useState('');
@@ -20,41 +21,29 @@ export default function Project() {
 
   function showPicture(x) {
     if (x === 'favourite') {
-      setImage1Visible(true);
-      setImage1Src('images/favanswer.jpg');
-      setLeftTextContent(Paragraphs[1]);
-      console.log(image1Src);
+      setImage1Src('myapp/public/images/favanswer.jpg');
     } else if (x === 'kroketa') {
-      setImage2Visible(true);
-      setImage2Src('images/kroketa.jpg');
-      setRightTextContent(Paragraphs[2]);
+      setImage2Src('/images/kroketa.jpg');
     } else if (x === 'vinos') {
-      setImage2Visible(true);
-      setImage2Src('images/vinos.jpg');
-      setRightTextContent(Paragraphs[4]);
+      setImage2Src('/images/vinos.jpg');
     } else if (x === 'gender') {
-      setImage1Visible(true);
-      setImage1Src('images/sample.jpeg');
-      setLeftTextContent(Paragraphs[3]);
+      setImage1Src('/images/sample.jpeg');
     } else if (x === 'animacy') {
-      setImage1Visible(true);
-      setImage1Src('images/animacy.png');
-      setLeftTextContent(Paragraphs[5]);
+      setImage1Src('/images/animacy.png');
     }
   }
 
-  function hidePicture() {
-    setImage1Visible(false);
-    setImage2Visible(false);
-  }
+
 
   return (
     <div>
+    <ImageColumnLeft image1Src={image1Src} />
+ <ImageColumnRight image2Src={image2Src}/>
+    <div id="column">
       <div
         className="projectDiv"
         id="projectDiv"
         onMouseOver={() => showPicture("favourite")}
-        onMouseLeave={hidePicture}
       >
         <h2>Favourite Answer</h2>
         <small>React, JSX & CSS</small>
@@ -63,7 +52,6 @@ export default function Project() {
         className="projectDiv"
         id="projectDiv"
         onMouseOver={() => showPicture("kroketa")}
-        onMouseLeave={hidePicture}
       >
         <h2>Kroketa Website</h2>
         <small>Squarespace & Custom CSS</small>
@@ -72,7 +60,6 @@ export default function Project() {
         className="projectDiv"
         id="projectDiv"
         onMouseOver={() => showPicture("gender")}
-        onMouseLeave={hidePicture}
       >
         <h2>Gender Pay Gap AI</h2>
         <small>Python</small>
@@ -81,7 +68,6 @@ export default function Project() {
         className="projectDiv"
         id="projectDiv"
         onMouseOver={() => showPicture("vinos")}
-        onMouseLeave={hidePicture}
       >
        <h2>Vinos Colltor Website</h2>
         <small>HTML, CSS, Javascript & PHP</small>
@@ -90,11 +76,11 @@ export default function Project() {
         className="projectDiv"
         id="projectDiv"
         onMouseOver={() => showPicture("animacy")}
-        onMouseLeave={hidePicture}
       >
         <h2>Animacy Testing Paradigm</h2>
         <small>Bonsai & Bonvision</small>
       </div>
+    </div>
     </div>
   );
 }
