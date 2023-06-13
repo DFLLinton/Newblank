@@ -5,8 +5,8 @@ export default function Project() {
   const image1file = document.getElementById("image1file");
   const image2 = document.getElementById("image2");
   const image2file = document.getElementById("image2file");
-//   const leftText = document.getElementById("leftText");
-//   const rightText = document.getElementById("rightText");
+  const leftText = document.getElementById("leftText");
+  const rightText = document.getElementById("rightText");
 
   const Paragraphs = {
     1: ' - Pair programming in a team of seven <br> developers deploying a new mobile <br> application.<br> - Integrating and designing twelve front-end <br> React components and APIs via Github,<br>prioritising principles of object oriented<br>programming.',
@@ -18,27 +18,35 @@ export default function Project() {
 
   function showPicture(x) {
     if (x === "favourite") {
-const image1 = document.getElementById("image1");
-  const image1file = document.getElementById("image1file");
+        if (image1 && image1file) {
       image1.style.display = "block";
       image1file.src = "images/favanswer.jpg";
-    //   leftText.innerHTML=Paragraphs[1];
+      leftText.innerHTML=Paragraphs[1];
+        }
     } else if (x === "kroketa") {
+        if (image2 && image2file) {
       image2.style.display = "block";
       image2file.src = "images/kroketa.jpg";
-    //   rightText.innerHTML = Paragraphs[2];
+      rightText.innerHTML = Paragraphs[2];
+        }
     } else if (x === "vinos") {
+        if (image2 && image2file) {
       image2.style.display = "block";
       image2file.src = "images/vinos.jpg";
-    //   rightText.innerHTML = Paragraphs[4];
+      rightText.innerHTML = Paragraphs[4];
+        }
     }else if (x === "gender") {
+        if (image1 && image1file) {
       image1.style.display = "block";
       image1file.src = "images/sample.jpeg";
-    //   leftText.innerHTML = Paragraphs[3];
+      leftText.innerHTML = Paragraphs[3];
+        }
     }else if (x === "animacy") {
+        if (image1 && image1file) {
       image1.style.display = "block";
       image1file.src = "images/animacy.png";
-    //   leftText.innerHTML = Paragraphs[5];
+      leftText.innerHTML = Paragraphs[5];
+        }
     }
   }
   function hidePicture(x) {
