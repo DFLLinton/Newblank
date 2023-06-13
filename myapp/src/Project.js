@@ -22,6 +22,7 @@ export default function Project() {
       setImage1Visible(true);
       setImage1Src('images/favanswer.jpg');
       setLeftTextContent(Paragraphs[1]);
+      console.log(image1Src);
     } else if (x === 'kroketa') {
       setImage2Visible(true);
       setImage2Src('images/kroketa.jpg');
