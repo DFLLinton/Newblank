@@ -12,3 +12,5 @@ console.log(props.image1Src);
   );
 }
 export default ImageColumnLeft;
+
+
