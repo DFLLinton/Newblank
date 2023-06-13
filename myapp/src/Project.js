@@ -1,6 +1,7 @@
 import "./styles.css";
 import React, { useState } from 'react';
 
+
 export default function Project() {
   const [image1Visible, setImage1Visible] = useState(false);
   const [image1Src, setImage1Src] = useState('');
