@@ -54,7 +54,7 @@
   top: 200px;
   max-width: 350px;
   color: white;
-  display: none;
+  display: block;
 }
 .associatedImageRight {
   position: absolute;
@@ -62,7 +62,7 @@
   top: 200px;
   max-width: 350px;
   color: white;
-  display: none;
+  display: block;
 }
 #title {
   color: white;
