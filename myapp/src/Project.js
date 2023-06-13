@@ -21,7 +21,7 @@ export default function Project() {
 
   function showPicture(x) {
     if (x === 'favourite') {
-      setImage1Src('myapp/public/images/favanswer.jpg');
+      setImage1Src('/images/favanswer.jpg');
     } else if (x === 'kroketa') {
       setImage2Src('/images/kroketa.jpg');
     } else if (x === 'vinos') {
