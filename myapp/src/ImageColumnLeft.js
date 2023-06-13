@@ -11,6 +11,8 @@ export default function ImageColumnLeft() {
         leftTextContent,
         rightTextContent
       } = useContext(AppContext);
+      
+      console.log('image1Src:', image1Src);
   return (
     <div className="associatedImage" id="image1">
       <img src={image1Src} className="sampleImage" id="image1file" />
