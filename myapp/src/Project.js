@@ -4,7 +4,10 @@ import ImageColumnLeft from './ImageColumnLeft.js';
 import ImageColumnRight from './ImageColumnRight.js';
 
 export default function Project() {
-  const [imageSrc, setImageSrc] = useState('.//images/vinos.jpg');
+  const [image1Visible, setImage1Visible] = useState(false);
+  const [image1Src, setImage1Src] = useState('myapp/public/images/favanswer.jpg');
+  const [image2Visible, setImage2Visible] = useState(false);
+  const [image2Src, setImage2Src] = useState('');
   const [leftTextContent, setLeftTextContent] = useState('');
   const [rightTextContent, setRightTextContent] = useState('');
 
@@ -18,15 +21,15 @@ export default function Project() {
 
   function showPicture(x) {
     if (x === 'favourite') {
-      setImageSrc('favourite');
+      setImage1Src('favanswer');
     } else if (x === 'kroketa') {
-      setImageSrc('kroketa');
+      setImage2Src('.//images/kroketa.jpg');
     } else if (x === 'vinos') {
-      setImageSrc('vinos');
+      setImage1Src('vinos');
     } else if (x === 'gender') {
-      setImageSrc('gender');
+      setImage1Src('.//images/sample.jpeg');
     } else if (x === 'animacy') {
-      setImageSrc('animacy');
+      setImage1Src('.//images/animacy.png');
     }
   }
 
@@ -34,8 +37,8 @@ export default function Project() {
 
   return (
     <div>
-    <ImageColumnLeft image1Src={imageSrc} />
- <ImageColumnRight image2Src={imageSrc}/>
+    <ImageColumnLeft image1Src={image1Src} />
+ <ImageColumnRight image2Src={image2Src}/>
     <div id="column">
       <div
         className="projectDiv"

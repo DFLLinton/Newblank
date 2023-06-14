@@ -1,8 +1,8 @@
 import "./styles.css";
 
 const ImageColumnLeft = (props) => {
-  const {imageSrc} = props;
-console.log(imageSrc);
+  const {image1Src} = props;
+console.log(image1Src);
 
   return (
     <div className="associatedImage" id="image1">
