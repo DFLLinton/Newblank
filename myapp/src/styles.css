@@ -36,6 +36,7 @@
   height: 350px;
   width: 350px;
   border-radius: 30px;
+  display: none;
   /* animation: fadeIn 0.75s ease-in-out forwards; */
 }
 /* @keyframes fadeIn {
