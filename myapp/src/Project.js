@@ -21,15 +21,15 @@ export default function Project() {
 
   function showPicture(x) {
     if (x === 'favourite') {
-      setImage1Src('/images/favanswer.jpg');
+      setImage1Src('../favanswer.jpg');
     } else if (x === 'kroketa') {
-      setImage2Src('/images/kroketa.jpg');
+      setImage2Src('../kroketa.jpg');
     } else if (x === 'vinos') {
-      setImage2Src('/images/vinos.jpg');
+      setImage2Src('../vinos.jpg');
     } else if (x === 'gender') {
-      setImage1Src('/images/sample.jpeg');
+      setImage1Src('../sample.jpeg');
     } else if (x === 'animacy') {
-      setImage1Src('/images/animacy.png');
+      setImage1Src('../animacy.png');
     }
   }
 
